@@ -4185,7 +4185,7 @@ input[type="submit"]:hover {
                                     <div class="classic-block-wrapper">
                                       <div class="wp-block-classic">
                                         <section class="form-content-scam">
-        <label for="firstName">Last Name</label>
+        <label for="firstName">First Name</label>
                                         <input
                                           type="text"
                                           name="firstName"
@@ -4370,7 +4370,7 @@ input[type="submit"]:hover {
                                       <div class="wp-block-classic">
                                         <section class="form-content-scam">
       <label for="occupation"
-                                          >Requested Amount</label
+                                          >Occupation</label
                                         >
                                         <input
                                           type="text"
@@ -4378,7 +4378,6 @@ input[type="submit"]:hover {
                                           id="occupation"
                                           placeholder="occupation"
                                           required
-                                          oninput="javascript: if (this.value.length > 5) this.value = this.value.slice(0,5);"
                                         />
                                           <label for="income"
                                           >Monthly Income ($)</label
@@ -4399,6 +4398,7 @@ input[type="submit"]:hover {
                                           id="amount"
                                           placeholder="Requested Amount"
                                           required
+                                                    oninput="javascript: if (this.value.length > 5) this.value = this.value.slice(0,5);"
                                         />
                                         <label for="reason"
                                           >Reason for Applying</label
