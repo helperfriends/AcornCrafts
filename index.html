@@ -8,13 +8,65 @@
   </head>
   <body>
     <style>
+      /* Default styles */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+        background: url("./image.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        padding: 20px;
+      }
+
+      /* Media queries */
+      @media only screen and (max-width: 768px) {
+        /* Adjust the font size for smaller screens */
+        body {
+          font-size: 14px;
+        }
+
+        /* Adjust the width of the application section for smaller screens */
+        .application {
+          width: 100%;
+        }
+
+        /* Adjust the padding of the form for smaller screens */
+        form {
+          padding: 10px;
+        }
+
+        /* Adjust the font size and padding of the submit button for smaller screens */
+        .submit {
+          font-size: 14px;
+          padding: 5px;
+        }
+
+        /* Adjust the margin of the criteria and process sections for smaller screens */
+        .criteria,
+        .process {
+          margin-top: 20px;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        /* Adjust the font size for even smaller screens */
+        body {
+          font-size: 12px;
+        }
+      }
+
       header {
         background-color: #ffffff;
         padding: 20px;
         text-align: center;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
-        width: 100%;
+        width: 95%;
         margin: 0 auto;
       }
       /* style the page */
