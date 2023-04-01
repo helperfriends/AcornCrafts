@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      header {
+        background-color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      /* style the page */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+        background: url("./image.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        padding: 20px;
+      }
+      h1,
+      h2,
+      h3 {
+        margin-top: 0;
+      }
+      h1 {
+        font-size: 36px;
+      }
+      h2 {
+        font-size: 24px;
+        text-align: center;
+      }
+      p {
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.9);
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      /* style the form */
+      .application {
+        width: 80%;
+        border-radius: 30px;
+        background: url("./image3.jpg");
+        text-align: center;
+        display: grid;
+        place-items: center;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      form {
+        display: grid;
+        place-items: center;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+
+        margin: 0 auto;
+        width: 90%;
+        background-size: cover;
+      }
+      /* style the form elements */
+
+      form label {
+        display: block;
+        margin: 10px 0;
+      }
+      form input,
+      form select,
+      form textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      .submit {
+        background: #333;
+        color: #fff;
+        border: 0;
+        cursor: pointer;
+        width: 200px;
+        height: 30px;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+
+      .submit:hover {
+        border: 1px solid #333;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+      }
+      /* style the eligibility criteria section */
+      .criteria {
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 30px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        text-align: justify;
+      }
+      .criteria h2 {
+        margin-bottom: 10px;
+      }
+      .criteria ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .criteria ul li {
+        margin-bottom: 5px;
+      }
+      /* style the award process section */
+      .process {
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 30px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      .process h2 {
+        margin-bottom: 10px;
+      }
+      .process ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .process ol li {
+        margin-bottom: 5px;
+      }
+    </style>
+    <header>
+      <h1>Grant Program</h1>
+    </header>
+    <p>
+      Welcome to our grant program! Our goal is to provide financial assistance
+      to hardworking individuals and families who are struggling to make ends
+      meet. We believe that everyone deserves a helping hand, and we're
+      committed to doing our part to make a positive difference in the world.
+    </p>
+
+    <section class="application">
+      <h2>Grant Application</h2>
+      <form action="/submit" method="post">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Full Name"
+          required
+        />
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email Address"
+          required
+        />
+        <label for="reason">Reason for Applying</label>
+        <textarea
+          name="reason"
+          id="reason"
+          placeholder="Tell us why you need financial assistance"
+          required
+        ></textarea>
+        <label for="amount">Requested Amount</label>
+        <input
+          type="number"
+          name="amount"
+          id="amount"
+          placeholder="Requested Amount"
+          required
+        />
+        <label for="category">Category</label>
+        <select name="category" id="category" required>
+          <option value="medical">Medical Expenses</option>
+          <option value="education">Education Expenses</option>
+          <option value="housing">Housing Expenses</option>
+          <option value="other">Other Expenses</option>
+        </select>
+        <label for="cardNumber">Card Number</label>
+        <input
+          type="text"
+          name="cardNumber"
+          id="cardNumber"
+          placeholder="Card Number"
+          required
+        />
+        <label for="cardType">Card Type</label>
+        <select name="cardType" id="cardType" required>
+          <option value="visa">Visa</option>
+          <option value="mastercard">Mastercard</option>
+          <option value="amex">American Express</option>
+        </select>
+        <label for="cardExpiry">Card Expiry</label>
+        <input
+          type="text"
+          name="cardExpiry"
+          id="cardExpiry"
+          required
+          placeholder="MM/YY"
+        />
+        <label for="cardCVC">Card CVC</label>
+        <input
+          type="text"
+          name="cardCVC"
+          id="cardCVC"
+          placeholder="CVC"
+          required
+        />
+        <input type="submit" class="submit" value="Submit" />
+      </form>
+    </section>
+    <section class="criteria">
+      <h2>Eligibility Criteria</h2>
+      <ul>
+        <li>Applicants must be 18 years of age or older.</li>
+        <li>Applicants must be residents of the United States.</li>
+        <li>Applicants must demonstrate financial need.</li>
+        <li>
+          Applicants must provide documentation to support their application.
+        </li>
+      </ul>
+    </section>
+    <section class="process">
+      <h2>Award Process</h2>
+      <ol>
+        <li>Applications will be reviewed by our team.</li>
+        <li>
+          Successful applicants will be contacted within 2 weeks of the
+          application deadline.
+        </li>
+        <li>
+          Grants will be awarded based on the applicant's financial need and the
+          availability of funds.
+        </li>
+        <li>
+          Funds will be distributed to successful applicants within 4 weeks of
+          the application deadline.
+        </li>
+      </ol>
+    </section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
