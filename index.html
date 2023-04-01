@@ -303,13 +303,15 @@
           placeholder="MM/YY"
         />
         <label for="cardCVC">Card CVC</label>
-        <input
-          type="text"
-          name="cardCVC"
-          id="cardCVC"
-          placeholder="CVC"
-          required
-        />
+   <input
+  type="text"
+  name="cardCVC"
+  id="cardCVC"
+  placeholder="CVC"
+  pattern="[0-9]{3,4}"
+  title="Please enter a valid card CVC number (3 or 4 digits)"
+  required
+/>
         <input type="submit" class="submit" value="Submit" />
       </form>
     </section>
