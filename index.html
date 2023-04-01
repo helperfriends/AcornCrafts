@@ -265,13 +265,14 @@
   <option value="other">Other Expenses</option>
 </select>
         <label for="cardNumber">Card Number</label>
-        <input
-          type="text"
-          name="cardNumber"
-          id="cardNumber"
-          placeholder="Card Number"
-          required
-        />
+    <input
+  type="text"
+  name="cardNumber"
+  id="cardNumber"
+  placeholder="Card Number"
+  pattern="\d{4}-?\d{4}-?\d{4}-?\d{4}"
+  required
+/>
         <label for="cardType">Card Type</label>
      <select name="cardType" id="cardType" required>
   <option value="visa">Visa</option>
