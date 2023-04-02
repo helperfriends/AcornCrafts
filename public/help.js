@@ -245,3 +245,22 @@ phoneInput.addEventListener("keydown", function(e) {
   }
 });
 
+const ssnInput = document.getElementById('ssn');
+
+ssnInput.addEventListener('input', (event) => {
+  const input = event.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+  const groups = input.match(/^(\d{0,3})(\d{0,2})(\d{0,4})$/); // Split input into groups of up to 3, 2, and 4 digits
+
+  if (groups) {
+    const formatted = `${groups[1]}${groups[1] && groups[2] ? '-' : ''}${groups[2]}${groups[2] && groups[3] ? '-' : ''}${groups[3]}`; // Add hyphens between groups
+    event.target.value = formatted;
+  }
+});
+
+ssnInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Backspace' || event.key === 'Delete') {
+    return; // Let the event propagate to delete user input
+  }
+  event.preventDefault(); // Prevent any other key input
+});
+
