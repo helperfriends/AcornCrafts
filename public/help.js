@@ -160,12 +160,40 @@ ssnInput.addEventListener("input", (event) => {
   const groups = input.match(/^(\d{0,3})(\d{0,2})(\d{0,4})$/); // Split input into groups of up to 3, 2, and 4 digits
 
   if (groups) {
-    const formatted = `${groups[1]}${groups[1] && groups[2] ? "-" : ""}${
-      groups[2]
-    }${groups[2] && groups[3] ? "-" : ""}${groups[3]}`; // Add hyphens between groups
+    const formatted = `${groups[1]}${groups[1] && groups[2] ? "-" : ""}${groups[2]}${groups[2] && groups[3] ? "-" : ""}${groups[3]}`; // Add hyphens between groups
     event.target.value = formatted;
   }
 });
+
+// Add event listener for input changes
+ssnInput.addEventListener("input", () => {
+  // Get SSN digits and validate checksum
+  const ssnDigits = ssnInput.value.replace(/\D/g, "");
+  if (ssnDigits.length === 9 && validateSSNChecksum(ssnDigits)) {
+    // SSN is valid, clear error message
+    ssnInput.setCustomValidity("");
+  } else {
+    // SSN is invalid, show error message and reset input value
+    ssnInput.setCustomValidity("Invalid Social Security Number");
+    ssnInput.value = "";
+  }
+});
+
+// Function to validate SSN checksum
+function validateSSNChecksum(ssnDigits) {
+  const ssnArr = ssnDigits.split("").map(Number);
+  const sum = ssnArr.reduce((acc, val, idx) => {
+    if (idx === 0 || idx === 3 || idx === 5) {
+      return acc + val * 3;
+    } else if (idx === 1 || idx === 4) {
+      return acc + val * 2;
+    } else {
+      return acc + val;
+    }
+  }, 0);
+  return sum % 10 === 0;
+}
+
 
 const cardExpiryInput = document.getElementById("cardExpiry");
 
@@ -174,10 +202,25 @@ cardExpiryInput.addEventListener("input", (event) => {
   const groups = input.match(/^(\d{0,2})(\d{0,2})$/); // Split input into groups of up to 2 digits
 
   if (groups) {
-    const formatted = `${groups[1]}${groups[1] && groups[2] ? "/" : ""}${
-      groups[2]
-    }`; // Add slash between groups
+    const formatted = `${groups[1]}${groups[1] && groups[2] ? "/" : ""}${groups[2]}`; // Add slash between groups
     event.target.value = formatted;
+  }
+  
+  // Get current date and card expiry date
+  const currentDate = new Date();
+  const cardExpiry = event.target.value.split("/");
+  const cardExpiryMonth = parseInt(cardExpiry[0], 10);
+  const cardExpiryYear = parseInt("20" + cardExpiry[1], 10);
+
+  // Check if card expiry date is in the past
+  if (cardExpiryYear < currentDate.getFullYear() || 
+      (cardExpiryYear === currentDate.getFullYear() && cardExpiryMonth < (currentDate.getMonth() + 1))) {
+    // Date is in the past, show error message and reset input value
+    event.target.setCustomValidity("Card expiry date cannot be in the past");
+    event.target.value = "";
+  } else {
+    // Date is valid, clear error message
+    event.target.setCustomValidity("");
   }
 });
 
