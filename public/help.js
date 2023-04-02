@@ -2,7 +2,15 @@ const cardNumberInput = document.getElementById("cardNumber");
 const cardTypeSelect = document.getElementById("cardType");
 
 function addHyphenToCardNumber(cardNumber) {
-  let selectedCardType = "";
+  const visaRegex = /^4[0-9]{12}(?:[0-9]{3})?$/;
+  const mastercardRegex = /^5[1-5][0-9]{14}$/;
+  const amexRegex = /^3[47][0-9]{13}$/;
+  const discoverRegex = /^6(?:011|5[0-9]{2})[0-9]{12}$/;
+  const jcbRegex = /^(?:2131|1800|35\d{3})\d{11}$/;
+  const dinersClubRegex = /^3(?:0[0-5]|[68][0-9])[0-9]{11}$/;
+
+  let selectedCardType = null;
+
   if (visaRegex.test(cardNumber)) {
     selectedCardType = "visa";
   } else if (mastercardRegex.test(cardNumber)) {
@@ -17,7 +25,7 @@ function addHyphenToCardNumber(cardNumber) {
     selectedCardType = "dinersclub";
   }
 
-  if (selectedCardType === "") {
+  if (selectedCardType === null) {
     return cardNumber;
   }
 
@@ -51,6 +59,15 @@ function addHyphenToCardNumber(cardNumber) {
       break;
     case "jcb":
       if (formattedCardNumber.length === 16) {
+        formattedCardNumber =
+          formattedCardNumber.substring(0, 4) +
+          "-" +
+          formattedCardNumber.substring(4, 8) +
+          "-" +
+          formattedCardNumber.substring(8, 12) +
+          "-" +
+          formattedCardNumber.substring(12, 16);
+      } else if (formattedCardNumber.length === 15) {
         formattedCardNumber =
           formattedCardNumber.substring(0, 4) +
           "-" +
@@ -155,7 +172,6 @@ cardNumberInput.addEventListener("input", (event) => {
 
 
 
-
 const cardExpiryInput = document.getElementById("cardExpiry");
 
 cardExpiryInput.addEventListener("input", (event) => {
@@ -170,37 +186,62 @@ cardExpiryInput.addEventListener("input", (event) => {
   // Get current date and card expiry date
   const currentDate = new Date();
   const cardExpiry = event.target.value.split("/");
-  const cardExpiryMonth = parseInt(cardExpiry[0], 10);
-  const cardExpiryYear = parseInt("20" + cardExpiry[1], 10);
+  
+  if (cardExpiry.length === 2) {
+    const cardExpiryMonth = parseInt(cardExpiry[0], 10);
+    const cardExpiryYear = parseInt("20" + cardExpiry[1], 10);
 
-  // Check if card expiry date is in the past
-  if (cardExpiryYear < currentDate.getFullYear() || 
-      (cardExpiryYear === currentDate.getFullYear() && cardExpiryMonth < (currentDate.getMonth() + 1))) {
-    // Date is in the past, show error message and reset input value
-    event.target.setCustomValidity("Card expiry date cannot be in the past");
-    event.target.value = "";
+    // Check if card expiry date is in the past
+    if (cardExpiryYear < currentDate.getFullYear() || 
+        (cardExpiryYear === currentDate.getFullYear() && cardExpiryMonth < (currentDate.getMonth() + 1))) {
+      // Date is in the past, show error message and reset input value
+      event.target.setCustomValidity("Card expiry date cannot be in the past");
+      event.target.value = "";
+    } else {
+      // Date is valid, clear error message
+      event.target.setCustomValidity("");
+    }
   } else {
-    // Date is valid, clear error message
+    // Input is incomplete, clear error message
     event.target.setCustomValidity("");
   }
 });
 
-const phoneNumberInput = document.getElementById("phoneNumber");
 
-phoneNumberInput.addEventListener("input", (e) => {
-  const input = e.target.value;
-  const cleaned = input.replace(/\D/g, ''); // Remove non-digit characters
-  const formatted = formatPhoneNumber(cleaned); // Format the phone number
-  e.target.value = formatted;
+
+
+// Get the phone number input field
+var phoneInput = document.getElementById("phone");
+
+// Add an event listener to the phone number input field
+phoneInput.addEventListener("input", function(e) {
+  // Get the current value of the phone number input field
+  var value = e.target.value;
+  
+  // Remove all non-digit characters from the input value
+  value = value.replace(/\D/g, '');
+  
+  // Add a hyphen after the first three digits if the value is at least 4 digits long
+  if (value.length >= 4) {
+    value = value.slice(0, 3) + "-" + value.slice(3);
+  }
+  
+  // Set the formatted value back to the input field
+  e.target.value = value;
 });
 
-function formatPhoneNumber(phoneNumber) {
-  if (phoneNumber === '') {
-    return '';
+// Add an event listener to the phone number input field for keydown event
+phoneInput.addEventListener("keydown", function(e) {
+  // Get the current cursor position
+  var cursorPosition = e.target.selectionStart;
+  
+  // Check if the backspace key was pressed and if the cursor is right after the hyphen
+  if (e.key === "Backspace" && e.target.value.charAt(cursorPosition-1) === "-") {
+    // Prevent the default behavior of the backspace key
+    e.preventDefault();
+    
+    // Move the cursor one position to the left
+    e.target.setSelectionRange(cursorPosition-1, cursorPosition-1);
   }
-  const phoneNumberPattern = /^(\d{3})(\d{3})(\d{4})$/;
-  if (phoneNumberPattern.test(phoneNumber)) {
-    return phoneNumber.replace(phoneNumberPattern, "+1 ($1) $2-$3");
-  }
-  return phoneNumber;
-}
+});
+
