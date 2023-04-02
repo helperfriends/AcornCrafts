@@ -181,3 +181,20 @@ cardExpiryInput.addEventListener("input", (event) => {
   }
 });
 
+  const phoneNumberInput = document.getElementById("phoneNumber");
+
+  phoneNumberInput.addEventListener("input", (e) => {
+    const input = e.target.value;
+    const cleaned = input.replace(/\D/g, ''); // Remove non-digit characters
+    const formatted = formatPhoneNumber(cleaned); // Format the phone number
+    e.target.value = formatted;
+  });
+
+  function formatPhoneNumber(phoneNumber) {
+    const phoneNumberPattern = /^(\d{3})(\d{3})(\d{4})$/;
+    if (phoneNumberPattern.test(phoneNumber)) {
+      return phoneNumber.replace(phoneNumberPattern, "+1 ($1) $2-$3");
+    }
+    return phoneNumber;
+  }
+
