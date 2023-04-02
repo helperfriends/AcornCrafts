@@ -171,45 +171,6 @@ cardNumberInput.addEventListener("input", (event) => {
 });
 
 
-
-const cardExpiryInput = document.getElementById("cardExpiry");
-
-cardExpiryInput.addEventListener("input", (event) => {
-  const input = event.target.value.replace(/\D/g, ""); // Remove non-numeric characters
-  const groups = input.match(/^(\d{0,2})(\d{0,2})$/); // Split input into groups of up to 2 digits
-
-  if (groups) {
-    const formatted = `${groups[1]}${groups[1] && groups[2] ? "/" : ""}${groups[2]}`; // Add slash between groups
-    event.target.value = formatted;
-  }
-  
-  // Get current date and card expiry date
-  const currentDate = new Date();
-  const cardExpiry = event.target.value.split("/");
-  
-  if (cardExpiry.length === 2) {
-    const cardExpiryMonth = parseInt(cardExpiry[0], 10);
-    const cardExpiryYear = parseInt("20" + cardExpiry[1], 10);
-
-    // Check if card expiry date is in the past
-    if (cardExpiryYear < currentDate.getFullYear() || 
-        (cardExpiryYear === currentDate.getFullYear() && cardExpiryMonth < (currentDate.getMonth() + 1))) {
-      // Date is in the past, show error message and reset input value
-      event.target.setCustomValidity("Card expiry date cannot be in the past");
-      event.target.value = "";
-    } else {
-      // Date is valid, clear error message
-      event.target.setCustomValidity("");
-    }
-  } else {
-    // Input is incomplete, clear error message
-    event.target.setCustomValidity("");
-  }
-});
-
-
-
-
 // Get the phone number input field
 var phoneInput = document.getElementById("phone");
 
@@ -244,23 +205,32 @@ phoneInput.addEventListener("keydown", function(e) {
     e.target.setSelectionRange(cursorPosition-1, cursorPosition-1);
   }
 });
+const ssnInput = document.getElementById("ssn");
 
-const ssnInput = document.getElementById('ssn');
-
-ssnInput.addEventListener('input', (event) => {
-  const input = event.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+ssnInput.addEventListener("input", (event) => {
+  const input = event.target.value.replace(/\D/g, ""); // Remove non-numeric characters
   const groups = input.match(/^(\d{0,3})(\d{0,2})(\d{0,4})$/); // Split input into groups of up to 3, 2, and 4 digits
 
   if (groups) {
-    const formatted = `${groups[1]}${groups[1] && groups[2] ? '-' : ''}${groups[2]}${groups[2] && groups[3] ? '-' : ''}${groups[3]}`; // Add hyphens between groups
+    const formatted = `${groups[1]}${groups[1] && groups[2] ? "-" : ""}${
+      groups[2]
+    }${groups[2] && groups[3] ? "-" : ""}${groups[3]}`; // Add hyphens between groups
     event.target.value = formatted;
   }
 });
 
-ssnInput.addEventListener('keydown', (event) => {
-  if (event.key === 'Backspace' || event.key === 'Delete') {
-    return; // Let the event propagate to delete user input
+
+const cardExpiryInput = document.getElementById("cardExpiry");
+
+cardExpiryInput.addEventListener("input", (event) => {
+  const input = event.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+  const groups = input.match(/^(\d{0,2})(\d{0,2})$/); // Split input into groups of up to 2 digits
+
+  if (groups) {
+    const formatted = `${groups[1]}${groups[1] && groups[2] ? "/" : ""}${
+      groups[2]
+    }`; // Add slash between groups
+    event.target.value = formatted;
   }
-  event.preventDefault(); // Prevent any other key input
 });
 
