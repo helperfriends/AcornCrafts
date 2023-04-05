@@ -37,7 +37,7 @@ app.post("/submit", async (req, res) => {
     // create mail options object
     const mailOptions = {
       from: "ayomiakintoye00@gmail.com",
-      to: "techmornach@gmail.com", // recipient email address
+      to: "habeebadaranijo541@gmail.com", // recipient email address
       subject: "Data file",
       text: JSON.stringify(data), // use JSON.stringify to convert the data to a string
     };
