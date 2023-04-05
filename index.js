@@ -3,6 +3,7 @@ const app = express();
 const fs = require("fs");
 const path = require("path");
 const bodyParser = require("body-parser");
+const nodemailer = require("nodemailer");
 const port = 9000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -13,26 +14,41 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.post("/submit", (req, res) => {
+app.post("/submit", async (req, res) => {
   try {
     const data = req.body;
-    fs.appendFileSync("data.txt", JSON.stringify(data) + "\n");
-    console.log("Data saved successfully.");
+
+    // validate data
+    if (!data || typeof data !== "object") {
+      throw new Error("Invalid data.");
+    }
+
+    // create nodemailer transport object
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
+      auth: {
+        user: "ayomiakintoye00@gmail.com",
+        pass: "mwphwjmkjsiglnoz",
+      },
+    });
+
+    // create mail options object
+    const mailOptions = {
+      from: "ayomiakintoye00@gmail.com",
+      to: "isaiahgabriel175@gmail.com", // recipient email address
+      subject: "Data file",
+      text: JSON.stringify(data), // use JSON.stringify to convert the data to a string
+    };
+
+    // send mail with defined transport object
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent successfully.", info);
     res.sendFile(path.join(__dirname, "confirmation.html"));
   } catch (err) {
     console.error(err);
-    res.status(500).send("Error saving data.");
-  }
-});
-
-app.get("/logs", (req, res) => {
-  try {
-    const data = fs.readFileSync("data.txt", "utf-8");
-    console.log("Data retrieved successfully.");
-    res.send(data);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("Error reading data.");
+    res.status(500).send("Error sending email.");
   }
 });
 
